@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Designed</title>
+    <link rel="icon" type="image/png" href="gambar/logoFS.png">
+    <link rel="apple-touch-icon" href="gambar/LogoF.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgb(248, 234, 248);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+.textlef {  
+    color: aliceblue;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+}
+
+.top-bar {
+    background-color: #d7bb62;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.social-media span {
+    margin-right: 5px;
+}
+
+.social-icon i {
+    margin-right: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+}
+
+.top-links {
+    display: flex;
+    gap: 80px;
+}
+
+.navbar {
+    background-color: #7f42a5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    color: aliceblue;
+}
+
+.Logo {
+    font-size: 24px;
+    font-weight: 900px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+    font-weight: bold;
+    justify-content: center;  /* Teks rata tengah (Kiri-Kanan) */
+    align-items: center;      /* Teks rata tengah (Atas-Bawah) */
+}
+
+.nav-links li {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-links li:hover {
+    color: #d7bb62;
+}
+
+/* --- SEARCH --- */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    transition: 0.4s;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 0;
+    padding: 0;
+    transition: 0.4s;
+    font-size: 14px;
+}
+
+/* Tombol Kaca Pembesar */
+.search-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #7f42a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #d7bb62;
+    color: #5a256e;
+}
+
+
+.search-box.active input {
+    width: 150px;
+    padding: 0 10px;
+}
+
+/* Penanda */
+.highlight {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    border-radius: 3px;
+    box-shadow: 0 0 5px yellow;
+}
+
+
+.dropdown-menu {
+    background-color: #7f42a5; 
+    border: 2px solid #d7bb62; 
+    border-radius: 10px;       
+    padding: 10px 0;          
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3); 
+}
+
+
+.dropdown-item {
+    color: white !important;   
+    font-weight: 500;
+    transition: all 0.3s ease; 
+}
+
+.dropdown-item:hover {
+    background-color: #d7bb62; 
+    color: #5a256e !important; 
+    padding-left: 20px;        
+}
+
+
+.dropdown-divider {
+    border-top: 1px solid rgba(215, 187, 98, 0.5); 
+}
+
+.footer-bottom {
+    background-color: #d7bb62;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Poppins, Arial, sans-serif;
+  background:linear-gradient(140deg,#f9fbff 0%, #e9f2ff 40%, #f5ecff 100%);
+  color:#1f2937;
+}
+
+body::before{
+  width:260px;height:260px;
+  top:8%;left:6%;
+  background:radial-gradient(circle at 30% 30%, #a5b4ff, #d9e6ff);
+}
+body::after{
+  width:320px;height:320px;
+  bottom:6%;right:10%;
+  background:radial-gradient(circle at 60% 40%, #ffd6f7, #ffeefc);
+}
+
+header{
+  text-align:center;
+  padding:46px 16px 8px;
+}
+header h1{margin:0;}
+header p{color:#64748b}
+
+.container{
+  max-width:1100px;
+  margin:50px auto;
+  width: 90%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(195px, 1fr));
+  gap:20px;
+  align-items:stretch;
+}
+
+.card{
+  height:250px;
+  border-radius:16px;
+  backdrop-filter: blur(14px);
+  background:linear-gradient(180deg, rgba(255,255,255,.6), rgba(255,255,255,.35));
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:0 20px 40px rgba(149,157,165,.18);
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform .45s cubic-bezier(.22,1,.36,1), box-shadow .45s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 28px rgba(0,0,0,.12);
+}
+
+.card-inner{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  height:100%;
+  padding:20px;
+}
+
+.avatar{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid rgba(255,255,255,.9);
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  position:absolute;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.name{font-weight:600;font-size:1.1rem;text-align:center;}
+.role{color:#6366f1;font-size:.9rem;text-align:center}
+
+
+/* MODAL (masih glass style) */
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  place-items:center;
+  background:rgba(255,255,255,.55);
+  backdrop-filter: blur(12px);
+}
+.modal.active{display:grid;}
+
+.modal-content{
+  width:95%;
+  max-width:520px;
+  border-radius:26px;
+  background:linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.5));
+  border:1px solid rgba(255,255,255,.7);
+  box-shadow:0 25px 45px rgba(0,0,0,.15);
+  padding:26px;
+  animation:fadeUp .35s ease forwards;
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(16px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.modal-top{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:10px;
+}
+.modal-top img{
+  width:70px;height:70px;border-radius:50%;object-fit:cover;
+  border:3px solid white;
+}
+.modal-top span{color:#6366f1}
+.modal p{line-height:1.6;color:#334155}
+
+.close-btn{
+  margin-top:16px;
+  width:100%;
+  padding:12px 0;
+  border:none;
+  border-radius:16px;
+  font-size:.95rem;
+  cursor:pointer;
+  background:linear-gradient(120deg,#6366f1,#22c55e);
+  color:white;
+}
+.close-btn:hover{opacity:.95}
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="top-bar">
+        <div class="social-media">
+            <span class="textlef"> follow our media social : </span>
+            <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                &nbsp;
+                <i class="fab fa-instagram"></i>
+                &nbsp;
+                <i class="fab fa-whatsapp"></i>
+                &nbsp;
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+        <div class="top-links">
+            <a href="3lokasi.html">FS LangitKikatoti</a>
+            <a href="3lokasi.html">FS AirDalamiti</a>
+            <a href="3lokasi.html">FS Secviro</a>
+            <a href="3lokasi.html">FS Vrigoen</a> 
+            <a href="3lokasi.html">FS Werfing</a>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="Logo">FantasySchool</div>
+        <ul class="nav-links">
+            <li><a href="1home.html">Home</a></li>
+            <li><a href="2about.html">About</a></li>
+            <li><a href="3lokasi.html">Lokasi</a></li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="4eskul.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Eskul
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Paskibra</a></li>
+                <li><a class="dropdown-item" href="#">Basket</a></li>
+                <li><a class="dropdown-item" href="#">Badminton</a></li>
+                <li><a class="dropdown-item" href="#">Tenis</a></li>
+                <li><a class="dropdown-item" href="#">Golf</a></li>
+                <li><a class="dropdown-item" href="#">Club Seni</a></li>
+                <li><a class="dropdown-item" href="#">PMR</a></li>
+                <li><a class="dropdown-item" href="#">Pramuka</a></li>
+                <li><a class="dropdown-item" href="#">Band Musik</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="4eskul.html">Semua info Eskul</a></li>
+            </ul>
+            </li>
+            <li><a href="5contact.html">Contact</a></li>
+            <li><a href="6prestasi.html">Prestasi</a></li>
+            <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Cari teks..." onkeypress="handleSearch(event)">
+            <div class="search-btn" onclick="toggleSearch()">
+                <i class="fas fa-search"></i>
+        </div>
+    </div>
+        </ul>
+        
+    </nav>
+
+    <br>
+
+    <header>
+  <h1>Developer Team</h1>
+  <p>Membangun pengalaman belajar modern dengan sentuhan teknologi yang lembut.</p>
+</header>
+
+<section class="container" id="team">
+  <div class="card" data-name="M. Abdurrohman Aziz Al Mubarok" data-role="0110125043" data-desc="Aziz membuat halaman utama dan lokasi agar mudah dipahami dan cepat diakses, memastikan informasi sekolah dan peta tampil jelas serta responsif.">
+    <img class="avatar" src="gambar/1ajis.jpeg">
+    <div class="card-inner">
+      <div class="name">M. Abdurrohman Aziz Al Mubarok</div>
+      <div class="role">NIM: 0110125043</div>
+    </div>
+  </div>
+
+  <div class="card" data-name="Syaqila Nurussyifa" data-role="0110125054" data-desc="Qiya menjelaskan visi, misi, dan kegiatan ekstrakurikuler dengan jelas.
+Halamannya memberi gambaran tentang arah sekolah dan aktivitas siswa.">
+    <img class="avatar" src="gambar/1qiya.jpeg">
+    <div class="card-inner">
+      <div class="name">Syaqila <br> Nurussyifa</div>
+      <div class="role">NIM: 0110125054</div>
+    </div>
+  </div>
+
+  <div class="card" data-name="Kayla Azzahra" data-role="0110125106" data-desc="Kayla menyusun informasi tentang sekolah dan tim developer secara rapi.
+Tujuannya agar pengunjung mengenal Fantasy School dengan mudah.">
+    <img class="avatar" src="gambar/1kayla.jpeg">
+    <div class="card-inner">
+      <div class="name">Kayla</div>
+      <div class="name">Azzahra</div>
+      <div class="role">NIM: 0110125098</div>
+    </div>
+  </div>
+
+  <div class="card" data-name="Akmal Hilmi Zaidaan" data-role="0110125134" data-desc="Akmal menampilkan fasilitas dan prestasi sekolah secara menarik.
+Setiap informasi dibuat singkat namun tetap informatif.">
+    <img class="avatar" src="gambar/1akmal.jpeg">
+    <div class="card-inner">
+      <div class="name">Akmal Hilmi Zaidaan</div>
+      <div class="role">NIM: 0110125134</div>
+    </div>
+  </div>
+
+  <div class="card" data-name="Muhammad Fathin Al Fatih" data-role="0110125098" data-desc="Fathin merancang halaman contact dan profile agar sederhana dan mudah digunakan.
+Pengunjung bisa mengenal sekolah sekaligus menghubunginya.">
+    <img class="avatar" src="gambar/1patin.jpeg">
+    <div class="card-inner">
+      <div class="name">Muhammad Fathin Al Fatih</div>
+      <div class="role">NIM: 0110125098</div>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <div class="modal-top">
+      <img id="mAvatar">
+      <div>
+        <h3 id="mName"></h3>
+        <span id="mRole"></span>
+      </div>
+    </div>
+    <p id="mDesc"></p>
+    <button class="close-btn" onclick="closeModal()">Tutup</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <footer>
+        <div class="footer-bottom">
+            &copy; 2026 Fantasy School | Designed and by Kelompok 12
+        </div>
+    </footer>
+
+   
+
+<script>
+ // 1. Fungsi untuk Membuka/Tutup Kolom Search
+    function toggleSearch() {
+        const searchBox = document.querySelector('.search-box');
+        const inputField = document.getElementById('searchInput');
+        
+        searchBox.classList.toggle('active');
+        
+        // Jika aktif, langsung fokus ke input agar siap ketik
+        if(searchBox.classList.contains('active')) {
+            inputField.focus();
+        }
+    }
+
+    // 2. Fungsi Logika Pencarian (Dijalankan saat tekan Enter)
+    function handleSearch(event) {
+        // Cek jika tombol yang ditekan adalah ENTER (key code 13)
+        if (event.key === 'Enter') {
+            const searchText = document.getElementById('searchInput').value.trim();
+            
+            // Hapus highlight lama sebelum mencari yang baru
+            removeHighlights();
+
+            if (searchText !== "") {
+                highlightText(searchText);
+            }
+        }
+    }
+
+    // 3. Fungsi Mewarnai Teks (Highlight)
+    function highlightText(term) {
+        const bodyContent = document.body;
+        const regex = new RegExp(`(${term})`, "gi"); // "gi" artinya Global & Insensitive (huruf besar/kecil dianggap sama)
+        
+        // Cari elemen p, h1-h6, span, li (hindari script/style)
+        const elements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6, span, li, a");
+        
+        let found = false;
+
+        elements.forEach(element => {
+            // Pastikan elemen punya teks dan bukan kosong
+            if (element.children.length === 0 && element.textContent.toLowerCase().includes(term.toLowerCase())) {
+                element.innerHTML = element.textContent.replace(regex, '<span class="highlight">$1</span>');
+                
+                // Scroll otomatis ke temuan pertama
+                if (!found) {
+                    element.scrollIntoView({behavior: "smooth", block: "center"});
+                    found = true;
+                }
+            }
+        });
+
+        if (!found) {
+            alert("Teks tidak ditemukan!");
+        }
+    }
+
+    // 4. Fungsi Hapus Highlight Lama
+    function removeHighlights() {
+        const highlights = document.querySelectorAll('.highlight');
+        highlights.forEach(mark => {
+            // Mengembalikan teks asli tanpa tag span
+            const parent = mark.parentNode;
+            parent.innerHTML = parent.innerHTML.replace(/<span class="highlight">([^<]+)<\/span>/gi, '$1');
+        });
+    }
+
+
+        const cards=document.querySelectorAll('.card');
+        const modal=document.getElementById('modal');
+        const mName=document.getElementById('mName');
+        const mRole=document.getElementById('mRole');
+        const mDesc=document.getElementById('mDesc');
+        const mAvatar=document.getElementById('mAvatar');
+
+        cards.forEach(card=>{
+        card.addEventListener('click',()=>{
+            mName.textContent=card.dataset.name;
+            mRole.textContent=card.dataset.role;
+            mDesc.textContent=card.dataset.desc;
+            mAvatar.src=card.querySelector('.avatar').src;
+            modal.classList.add('active');
+        });
+        });
+
+        function closeModal(){ modal.classList.remove('active'); }
+        modal.addEventListener('click',e=>{ if(e.target===modal) closeModal(); });
+
+</script>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>
