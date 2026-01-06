@@ -428,3 +428,118 @@ li {
         justify-content: center;
     }
 }
+
+/* --- BAGIAN GLOBAL (Agar Burger TIDAK MUNCUL di Desktop) --- */
+.menu-toggle {
+    display: none; /* Wajib disembunyikan di desktop */
+}
+
+/* CODE RESPONSIVE ( Khusus HP aja ye)*/
+
+@media (max-width: 768px) {
+
+    /* 1. Bagian Header Atas (Top Bar) */
+    .top-bar {
+        flex-direction: column; /* Ubah jadi susun ke bawah */
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .social-media {
+        justify-content: center; /* Ikon sosmed ke tengah */
+        margin-bottom: 10px;
+    }
+
+    .top-links {
+        display: none; /* Link kecil disembunyikan di HP biar tidak penuh */
+    }
+
+    /* 2. Navigasi Utama (Menu) */
+    .navbar {
+        flex-direction: column; /* Menu jadi susun ke bawah */
+        padding: 15px;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .search-box {
+        margin-top: 15px; /* Beri jarak kotak pencarian */
+    }
+
+    /* 3. Hero Section (Bagian Gambar Utama) */
+    .dello {
+        padding: 100px 20px 50px 20px; /* Atur ulang jarak pinggir */
+        text-align: center;
+        height: auto; /* Tinggi otomatis mengikuti isi */
+        min-height: 100vh; /* Minimal setinggi layar HP */
+    }
+
+    .dello h1 {
+        font-size: 36px; /* Perkecil huruf judul (dari 60px) */
+        margin-bottom: 15px;
+    }
+    
+    .dello p {
+        font-size: 14px; /* Perkecil deskripsi */
+    }
+
+    /* 4. Tombol di Header (Profile & Visi Misi) */
+    .button {
+        width: 100%; /* Lebar penuh */
+        flex-direction: column; /* Tombol atas bawah */
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* 5. Panah Slider */
+    .arrow {
+        padding: 10px;
+        background: rgba(0,0,0,0.3); /* Tambah latar belakang biar kelihatan */
+        border-radius: 50%;
+    }
+
+    /* 6. Kartu (Card) di Bawah */
+    .card {
+        margin: 0 auto 30px auto !important; /* Paksa kartu ke tengah */
+        width: 90% !important; /* Lebar kartu 90% dari layar HP */
+    }
+    
+    /* 7. Footer */
+    .footer-center img {
+        width: 150px; /* Perkecil logo di footer */
+    }
+    
+    /* 1. Tampilkan Tombol Burger di HP */
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        color: white; /* Sesuaikan warna dengan background nav kamu */
+        cursor: pointer;
+        position: absolute; /* Agar posisinya fleksibel */
+        right: 20px;
+        top: 25px; /* Sesuaikan agar sejajar dengan Logo */
+    }
+
+    /* 2. Sembunyikan Menu Navigasi secara default */
+    .nav-links {
+        display: none; /* Hilang dulu sebelum dipencet */
+        flex-direction: column;
+        width: 100%;
+        background-color: #7f42a5; /* Beri warna background agar tulisan terbaca */
+        margin-top: 50px; /* Jarak agar tidak menabrak burger */
+        padding: 20px;
+    }
+
+    /* 3. Class Tambahan untuk Memunculkan Menu (Dipanggil JS) */
+    .nav-links.active {
+        display: flex; /* Munculkan saat class 'active' ada */
+    }
+}

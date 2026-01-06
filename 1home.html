@@ -39,6 +39,10 @@
 
     <nav class="navbar">
         <div class="Logo">FantasySchool</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
         <ul class="nav-links">
             <li><a href="1home.html">Home</a></li>
             <li><a href="2about.html">About</a></li>
@@ -198,22 +202,6 @@
 
 <br>
 <br>
-<br>
-<br>    
-
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-4">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis reiciendis officia iusto, ex pariatur necessitatibus saepe, provident illum sit, magni minima est minus dolore aut temporibus eos exercitationem sunt quas!
-            </p>
-		</div>
-		<div class="col-md-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias accusamus animi, nemo, expedita illo quaerat aliquam esse quod deserunt nam in soluta provident, debitis veritatis ipsam blanditiis consectetur architecto culpa!
-
-		</div>
-	</div>
-</div>
 
 <br>
 <br>
@@ -351,6 +339,13 @@
             parent.innerHTML = parent.innerHTML.replace(/<span class="highlight">([^<]+)<\/span>/gi, '$1');
         });
     }
+
+        // Fungsi untuk Klik Tombol Burger
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+
 </script>
 
     
